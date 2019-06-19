@@ -10,7 +10,7 @@ package info.heleno;
  * @author helenocampos
  */
 public class DataValidation{
-  String[] validCharacters = {"@"};
+  String[] chars = {"@", "#"};
 
   public boolean isValidUsername(String username){
       if (username == null) return false;
@@ -19,7 +19,7 @@ public class DataValidation{
 
   public boolean isValidEmail(String email){
     if(email==null) return false;
-    if(email.contains(validCharacters[0])){
+    if(email.contains(chars[0]) && !email.contains(chars[1])){
       return true;
     }
     return false;

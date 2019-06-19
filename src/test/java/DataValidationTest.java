@@ -43,4 +43,9 @@ public class DataValidationTest
     public void nullEmail() {
         assertEquals(false,validation.isValidEmail(null));
     }
+    
+    @Test
+     public void invalidEmail2() {
+         assertEquals(false,validation.isValidEmail("test!@test.com"));
+     }
 }
