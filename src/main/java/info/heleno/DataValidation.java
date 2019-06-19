@@ -10,15 +10,16 @@ package info.heleno;
  * @author helenocampos
  */
 public class DataValidation{
-  String[] chars = {"@"};
+  String[] validCharacters = {"@"};
 
   public boolean isValidUsername(String username){
       if (username == null) return false;
       return username.length() < 20 && username.length() > 0;
   }
-  
+
   public boolean isValidEmail(String email){
-    if(email.contains(chars[0])){
+    if(email==null) return false;
+    if(email.contains(validCharacters[0])){
       return true;
     }
     return false;
